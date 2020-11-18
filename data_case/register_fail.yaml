@@ -1,0 +1,18 @@
+- casedata: {'mobilephone': 123, 'pwd': 123456, 'regname': 'cxm'}
+  expect: {"status": 0, "code": "20109", "data": None, "msg": "手机号码格式不正确"}
+
+- casedata: {'mobilephone': 13315056469, 'pwd': 12345, 'regname': 'cxm'}
+  expect: {"status": 0, "code": "20108", "data": None, "msg": "密码长度必须为6~18"}
+
+- casedata: {'mobilephone': 13315076469, 'pwd': 1234511111111111111, 'regname': 'cxm'}
+  expect: {"status": 0, "code": "20108", "data": None, "msg": "密码长度必须为6~18"}
+
+- casedata: {'mobilephone': 13333333333333333333333, 'pwd': 123456, 'regname': 'cxm'}
+  expect: {"status": 0, "code": "20109", "data": None, "msg": "手机号码格式不正确"}
+
+- casedata: {'mobilephone': '', 'pwd': 12345, 'regname': 'cxm'}
+  expect: {"status": 0, "code": "20103", "data": None, "msg": "手机号不能为空"}
+
+- casedata: {'mobilephone': 13315216469, 'pwd': '', 'regname': 'cxm'}
+  expect: {"status": 0, "code": "20103", "data": None, "msg": "密码不能为空"}
+

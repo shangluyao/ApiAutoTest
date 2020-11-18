@@ -1,0 +1,11 @@
+- casedata: {'mobilephone':18586825689,'pwd':123456}
+  expect: {"status": 0, "code": "20111", "data": None, "msg": "用户名或密码错误"}
+
+- casedata: {'mobilephone':18686820596,'pwd':1234564124}
+  expect: {"status": 0, "code": "20111", "data": None, "msg": "用户名或密码错误"}
+
+- casedata: {'mobilephone': None', 'pwd': '123456'}
+  expect: {"status": 0, "code": "20111", "data": None, "msg": "用户名或密码错误"}
+
+- casedata: {'mobilephone': '18686820596', 'pwd': None'}
+  expect: {"status": 0, "code": "20111", "data": None, "msg": "用户名或密码错误"}
